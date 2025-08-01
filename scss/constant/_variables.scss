@@ -1,0 +1,17 @@
+// scss/constant/_variables.scss
+
+// 색상 변수
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$success-color: #28a745;
+$danger-color: #dc3545;
+
+// 간격 변수
+$increase-unit: 50px;
+
+// 비공개 변수 (Sass 1.32.0 이상)
+// 파일명 앞에 하이픈이나 언더스코어가 없으면 외부에서 직접 접근 불가
+$_internal-border-radius: 4px;
+
+// 이 변수는 직접 사용되지 않고, 다른 변수에서 내부적으로 사용될 때 유용합니다.
+$public-border-radius: $_internal-border-radius * 2; // 공개 변수
