@@ -1,42 +1,8 @@
 // scss/constant/_mixins.scss
 
-// 반응형 웹을 위한 미디어 쿼리 믹스인
-@mixin media-breakpoint-up($breakpoint) {
-  @if $breakpoint == sm {
-    @media (min-width: 576px) { @content; }
-  } @else if $breakpoint == md {
-    @media (min-width: 768px) { @content; }
-  } @else if $breakpoint == lg {
-    @media (min-width: 992px) { @content; }
-  } @else if $breakpoint == xl {
-    @media (min-width: 1200px) { @content; }
-  } @else {
-    @warn "알 수 없는 미디어 쿼리 브레이크포인트: #{$breakpoint}. sm, md, lg, xl 중 하나를 사용하세요.";
-  }
-}
-
 // 버튼 스타일을 위한 믹스인
-@mixin button-style($bg-color, $text-color: #fff, $padding: 0.75rem 1.5rem) {
-  background-color: $bg-color;
-  color: $text-color;
-  padding: $padding;
-  border: 1px solid darken($bg-color, 10%);
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: darken($bg-color, 10%);
-  }
-}
-
-// 그림자 효과 믹스인 (내부 전용 믹스인 예시)
-// 파일명 앞에 하이픈이나 언더스코어가 없으면 외부에서 직접 접근 불가
-@mixin _internal-box-shadow($x, $y, $blur, $spread, $color) {
-  box-shadow: $x $y $blur $spread $color;
-}
-
-// 공개 그림자 믹스인 (내부 믹스인 활용)
-@mixin card-shadow() {
-  @include _internal-box-shadow(0, 4px, 8px, 0, rgba(0, 0, 0, 0.1));
+@mixin button-size($index, $wid: 200px, $hei: 100px) {
+  width: calc($wid + 50px * $index);
+  height: calc($hei + 30px * $index);
+  margin: 10px 0;
 }
