@@ -1,5 +1,5 @@
 @use 'sass:list';
-@use 'lib'; // "./lib/_index.scss 모듈 import
+@use 'lib';  // "./lib/_index.scss" 모듈 import
 
 
 @for $i from 1 through 3 {
