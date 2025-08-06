@@ -1,0 +1,5 @@
+// scss/component/_button.scss
+
+@function get-border-size($i) {
+  @return $i * 10px;
+}

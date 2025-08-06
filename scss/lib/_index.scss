@@ -1,2 +1,3 @@
-@forward '../constant/variables';
+@forward '../constant/variables' hide $clrs;  // 특정 변수 forward 방지
 @forward '../constant/mixins';
+@forward '../component/button' as btn-*;      // module 접두어 구성해서 forward

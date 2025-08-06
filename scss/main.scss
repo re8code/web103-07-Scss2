@@ -1,10 +1,13 @@
 @use 'sass:list';
-@use 'lib';  // "./lib/_index.scss" 모듈 import
+@use 'lib' as lib;  // "./lib/_index.scss" 모듈, nickname "lib"로 import
 
+$clrs: pink orange blue;
 
 @for $i from 1 through 3 {
   .#{list.nth(lib.$btn-cls, $i)} {
-    background-color: list.nth(lib.$clrs, $i);
+    // background-color: list.nth(lib.$clrs, $i);
+    background-color: list.nth($clrs, $i);
+    border-radius: lib.btn-get-border-size($i);
 
     @include lib.button-size($i);
   }
