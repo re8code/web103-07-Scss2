@@ -1,17 +1,10 @@
 @use 'sass:list';
-@use './constant/variables';
-@use './constant/mixins' as mx;
+@use 'lib';
 
 @for $i from 1 through 3 {
-  .#{list.nth(variables.$btn-cls, $i)} {
-    background-color: list.nth(variables.$clrs, $i);
+  .#{list.nth(lib.$btn-cls, $i)} {
+    background-color: list.nth(lib.$clrs, $i);
 
-    @include mx.button-size($i);
+    @include lib.button-size($i);
   }
 }
-
-// div {
-//   width: 200px;
-//   height: 100px;
-//   margin: 10px 0;
-// }
