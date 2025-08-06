@@ -1,5 +1,6 @@
 @use 'sass:list';
-@use 'lib';
+@use 'lib'; // "./lib/_index.scss 모듈 import
+
 
 @for $i from 1 through 3 {
   .#{list.nth(lib.$btn-cls, $i)} {
